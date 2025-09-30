@@ -1,0 +1,249 @@
+/* ---------- RESET E BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 1rem = 16px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.6;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    padding: 2vw;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    position: relative; /* necessário para posicionar a imagem absoluta */
+    background-color: #333;
+    color: white;
+    padding: 2vh 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 5px 5px rgba(255, 0, 0, 0.2);
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    animation: sabreVibrar 1.5s ease-in-out infinite alternate;
+    transform-origin: 50% 90%;
+}
+
+/* Animação do sabre vibrando */
+@keyframes sabreVibrar {
+    0% {
+        transform: rotate(-5deg);
+        filter: drop-shadow(0 0 6px #ff1a1a);
+    }
+    50% {
+        transform: rotate(5deg);
+        filter: drop-shadow(0 0 12px #ff3333);
+    }
+    100% {
+        transform: rotate(-5deg);
+        filter: drop-shadow(0 0 6px #ff1a1a);
+    }
+}
+
+a {
+    color: #ff1a1a !important;
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1vh;
+}
+
+header h1 a {
+    color: white !important;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1vh;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 2vw;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* ---------- MAIN E SEÇÕES ---------- */
+main {
+    max-width: 100%;
+    padding: 0 5vw;
+    margin: 0 auto;
+}
+
+section {
+    margin: 5vh 0;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5vh;
+    text-align: center;
+}
+
+.projeto {
+    padding: 2vh 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.projeto:last-child {
+    border-bottom: none;
+}
+
+.projeto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+/* ---------- CONTATO ---------- */
+#contato {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5vh 2vw;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+    /* Removi a cor preta para manter padrão */
+}
+
+#contato p {
+    margin-bottom: 3vh;
+    color: #555;
+    line-height: 1.4;
+}
+
+.form-contato label {
+    display: block;
+    margin-bottom: 0.5vh;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 2vh;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-contato button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #0056b3;
+}
+
+.form-botoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.form-botoes button {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-botoes button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-botoes button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-botoes button[type="reset"] {
+    background-color: #ff0033;
+    color: white;
+}
+
+.form-botoes button[type="reset"]:hover {
+    background-color: #e60633;
+}
+
+.info-contato {
+    margin-top: 3vh;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.info-contato a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-contato a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 5vh;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 480px) {
+    #contato {
+        padding: 3vh 4vw;
+    }
+    #contato h2 {
+        font-size: 1.7rem;
+    }
+}
